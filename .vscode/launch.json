@@ -15,7 +15,7 @@
             "name": "data-structures-training: LinkedList",
             "type": "python",
             "request": "launch",
-            "program": "linkedlist.py",
+            "program": "linkedlist_tests.py",
             "console": "integratedTerminal"
         }
     ]

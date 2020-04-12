@@ -3,6 +3,7 @@ class Node:
         self.data = data
     data = None
     next = None
+    previous = None
 
 class SinglyLinkedList:
     head = None;
@@ -14,6 +15,24 @@ class SinglyLinkedList:
             while (currentNode.next is not None):
                 currentNode = currentNode.next
             currentNode.next = node
+    def addAtIndex(self, node, index):
+        if (self.head is None):
+            self.head = node
+        else:
+            if (index == 0):
+                node.next = self.head
+                self.head = node
+                return
+            currentNode = self.head
+            counter = 0
+            while (currentNode.next is not None):
+                if (counter == index - 1):
+                    temp = currentNode.next
+                    currentNode.next = node
+                    node.next = temp
+                    return
+                currentNode = currentNode.next
+                counter += 1
     def delete(self, nodeData):
         currentNode = self.head
         if (currentNode.data == nodeData):
@@ -23,7 +42,6 @@ class SinglyLinkedList:
                 currentNode.next = currentNode.next.next
             else:
                 currentNode = currentNode.next
-        
 
 def printLinkedList(linkedList):
     if (not linkedList.head):
@@ -36,14 +54,8 @@ def printLinkedList(linkedList):
             currentNode = currentNode.next
         for nodeToPrint in nodesToPrint:
             print("Data: "+str(nodeToPrint.data))
-            print("HasNext: "+str(nodeToPrint.next is not None))
+            if (nodeToPrint.next is None):
+                print("Next: ")
+            else:
+                print("Next: "+str(nodeToPrint.next.data))
             print()
-
-myLinkedList = SinglyLinkedList()
-myLinkedList.add(Node(1))
-myLinkedList.add(Node(2))
-myLinkedList.add(Node(3))
-myLinkedList.add(Node(4))
-myLinkedList.add(Node(5))
-myLinkedList.delete(5)
-printLinkedList(myLinkedList)
