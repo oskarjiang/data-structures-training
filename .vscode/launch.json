@@ -1,0 +1,22 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "data-structures-training: Array",
+            "type": "python",
+            "request": "launch",
+            "program": "array.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "data-structures-training: LinkedList",
+            "type": "python",
+            "request": "launch",
+            "program": "linkedlist.py",
+            "console": "integratedTerminal"
+        }
+    ]
+}
