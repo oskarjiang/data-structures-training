@@ -8,14 +8,14 @@
             "name": "data-structures-training: Array",
             "type": "python",
             "request": "launch",
-            "program": "array.py",
+            "program": "src/array.py",
             "console": "integratedTerminal"
         },
         {
             "name": "data-structures-training: LinkedList",
             "type": "python",
             "request": "launch",
-            "program": "linkedlist_tests.py",
+            "program": "src/linkedlist_tests.py",
             "console": "integratedTerminal"
         }
     ]
