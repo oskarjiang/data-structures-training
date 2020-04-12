@@ -18,5 +18,21 @@
             "program": "src/linkedlist_tests.py",
             "console": "integratedTerminal"
         }
+        },
+        {
+            "name": "data-structures-training: Stack",
+            "type": "python",
+            "request": "launch",
+            "program": "src/stack_tests.py",
+            "console": "integratedTerminal"
+        }
+        },
+        {
+            "name": "data-structures-training: Queue",
+            "type": "python",
+            "request": "launch",
+            "program": "src/queue_tests.py",
+            "console": "integratedTerminal"
+        }
     ]
 }
