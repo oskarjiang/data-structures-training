@@ -1,7 +1,7 @@
 import unittest
 import stack as s
 
-class LinkedListTests(unittest.TestCase):
+class StackTests(unittest.TestCase):
     def test_Push(self):
         testStack = s.Stack()
         testStack.push(0)
