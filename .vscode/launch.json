@@ -17,7 +17,6 @@
             "request": "launch",
             "program": "src/linkedlist_tests.py",
             "console": "integratedTerminal"
-        }
         },
         {
             "name": "data-structures-training: Stack",
@@ -25,13 +24,26 @@
             "request": "launch",
             "program": "src/stack_tests.py",
             "console": "integratedTerminal"
-        }
         },
         {
             "name": "data-structures-training: Queue",
             "type": "python",
             "request": "launch",
             "program": "src/queue_tests.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "data-structures-training: HashTable",
+            "type": "python",
+            "request": "launch",
+            "program": "src/hashtable_tests.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "data-structures-training: Heap",
+            "type": "python",
+            "request": "launch",
+            "program": "src/heap_tests.py",
             "console": "integratedTerminal"
         }
     ]
