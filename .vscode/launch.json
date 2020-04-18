@@ -45,6 +45,13 @@
             "request": "launch",
             "program": "src/heap_tests.py",
             "console": "integratedTerminal"
+        },
+        {
+            "name": "data-structures-training: BST",
+            "type": "python",
+            "request": "launch",
+            "program": "src/bst_tests.py",
+            "console": "integratedTerminal"
         }
     ]
 }
