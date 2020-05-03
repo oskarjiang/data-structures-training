@@ -5,7 +5,7 @@ class BST:
     
     def find(self, item):
         return self.findItemAt(item, 0)
-        
+    
     def findItemAt(self, item, index):
         root = self.items[index]
         if root is None:
@@ -17,6 +17,7 @@ class BST:
                 return self.findItemAt(item, self.getLeftChildIndex(index))
             elif item > root:
                 return self.findItemAt(item, self.getRightChildIndex(index))
+
     def insert(self, item):
         self.insertItemAt(item, 0)
 
@@ -38,12 +39,27 @@ class BST:
         if root is None:
             return
         elif root == item:
-            self.items[index] = None
+            self.replaceWithChildFrom(index)
         else:
             if item < root:
                 self.deleteItemAt(item, self.getLeftChildIndex(index))
             elif item > root:
                 self.deleteItemAt(item, self.getRightChildIndex(index))
+
+    def replaceWithChildFrom(self, index):
+        self.replaceWithChild(index)
+
+    def replaceWithChild(self, index):
+        leftChild = self.items[self.getLeftChildIndex(index)]
+        rightChild = self.items[self.getRightChildIndex(index)]
+        if leftChild is not None:
+            self.items[index] = leftChild
+            self.replaceWithChild(self.getLeftChildIndex(index))
+        elif rightChild is not None:
+            self.items[index] = rightChild
+            self.replaceWithChild(self.getRightChildIndex(index))
+        else:
+            self.items[index] = None
 
     def getParentIndex(self, index):
         return math.floor((index-1)/2)
