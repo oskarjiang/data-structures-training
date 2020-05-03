@@ -60,6 +60,19 @@ class BST:
             self.replaceWithChild(self.getRightChildIndex(index))
         else:
             self.items[index] = None
+    def treeWithDFT(self):
+        return self.treeWithDFTAt(0, '')
+
+    def treeWithDFTAt(self, index, res):
+        root = self.items[index]
+        leftChild = self.items[self.getLeftChildIndex(index)]
+        rightChild = self.items[self.getRightChildIndex(index)]
+        res = res + str(root) + ','
+        if leftChild is not None:
+            res = self.treeWithDFTAt(self.getLeftChildIndex(index), res)
+        if rightChild is not None:
+            res = self.treeWithDFTAt(self.getRightChildIndex(index), res)
+        return res
 
     def getParentIndex(self, index):
         return math.floor((index-1)/2)
